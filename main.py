@@ -1,7 +1,13 @@
 from sense_hat import SenseHat
 from time import sleep
 from random import randint
+import os
+import time
 
+def measure_temp():
+        temp = os.popen("vcgencmd measure_temp").readline()
+        return (temp.replace("temp=",""))
+        
 sense = SenseHat()
 
 print type(sense)
@@ -31,5 +37,6 @@ while True:
     sleep(1)
     sense.show_letter("S",text_colour=pick_random_colour())
     sleep(1)
-
+    print(measure_temp())
+        time.sleep(1)
 
