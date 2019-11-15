@@ -20,8 +20,7 @@ def pick_random_colour():
   return (random_red, random_green, random_blue)
   
 sense.clear()
-while(true)
-  {
+while True:
     sense.show_letter("B")
     sleep(1)
     sense.show_letter("O",text_colour=pick_random_colour())
@@ -31,6 +30,6 @@ while(true)
     sense.show_letter("I",text_colour=pick_random_colour())
     sleep(1)
     sense.show_letter("S",text_colour=pick_random_colour())
-  }
+    sleep(1)
 
 
